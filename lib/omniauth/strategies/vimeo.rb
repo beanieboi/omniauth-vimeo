@@ -5,35 +5,49 @@ module OmniAuth
   module Strategies
     class Vimeo < OmniAuth::Strategies::OAuth
       option :name, 'vimeo'
-      option :client_options, {:site => 'http://vimeo.com' }
 
-      uid { user['id'] }
+      option :client_options, {
+        :access_token_path => "/oauth/access_token",
+        :authorize_path => "/oauth/authorize",
+        :request_token_path => "/oauth/request_token",
+        :site => "https://vimeo.com"
+      }
+
+      uid { user_info['id'] }
 
       info do
         {
-          'nickname' => user['username'],
-          'name' => user['display_name'],
-          'location' => user['location'],
-          'description' => user['bio'],
-          'image' => user['portraits']['portrait'].select{|h| h['height'] == '300'}.first['_content'],
+          'nickname' => user_info['username'],
+          'name' => user_info['display_name'],
+          'location' => user_info['location'],
+          'description' => user_info['bio'],
+          'image' => user_info['portraits']['portrait'].select{|h| h['height'] == '300'}.first['_content'],
           'urls' => {
-            'website' => user['url'],
-            'vimeo' => user['profileurl']
+            'website' => user_info['url'],
+            'vimeo' => user_info['profileurl']
           }
         }
       end
 
       extra do
-        { 'user_hash' => user }
+        {
+          :raw_info => raw_info
+        }
       end
 
-      def user
-        user_hash['person']
+      def user_info
+        @user_info ||= raw_info.nil? ? {} : raw_info["person"]
       end
 
-      def user_hash
-        url = "http://vimeo.com/api/rest/v2?method=vimeo.people.getInfo&format=json"
-        @user_hash ||= MultiJson.decode(access_token.get(url).body)
+      def raw_info
+        @raw_info ||= MultiJson.load(access_token.get('/api/rest/v2?method=vimeo.people.getInfo&format=json').body)
+      rescue ::Errno::ETIMEDOUT
+        raise ::Timeout::Error
+      end
+
+      def request_phase
+        options[:authorize_params] = {:perms => options[:scope]} if options[:scope]
+        super
       end
     end
   end
