@@ -6,14 +6,14 @@ Gem::Specification.new do |gem|
   gem.name        = "omniauth-vimeo"
   gem.version     = Omniauth::Vimeo::VERSION
   gem.authors     = ["Benjamin Fritsch"]
-  gem.email       = ["ben@lomography.com"]
-  gem.homepage    = "https://github.com/lomography/omniauth-vimeo"
+  gem.email       = ["beanie@benle.de"]
+  gem.homepage    = "https://github.com/beanieboi/omniauth-vimeo"
   gem.description = %q{OmniAuth strategy for Vimeo}
   gem.summary     = gem.description
 
-  gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  gem.files         = `git ls-files`.split($\)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
   gem.add_runtime_dependency 'omniauth-oauth', '~> 1.0'
