@@ -4,6 +4,7 @@ This is an OmniAuth strategy for authenticating to Vimeo. To
 use it, you'll need to sign up for an OAuth Application ID and Secret
 on the [Vimeo Applications Page](http://vimeo.com/api/applications).
 
+[![Build Status](https://secure.travis-ci.org/beanieboi/omniauth-vimeo.png?branch=master)](http://travis-ci.org/beanieboi/omniauth-vimeo)
 [![Dependency Status](https://gemnasium.com/beanieboi/omniauth-vimeo.png)](https://gemnasium.com/beanieboi/omniauth-vimeo)
 
 ## Basic Usage
