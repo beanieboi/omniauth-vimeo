@@ -11,9 +11,13 @@ add the following line to your Gemfile.
 
     gem 'omniauth-vimeo'
 
+If you finished running bundler and omniauth-vimeo is ready to go, you need to add the following lines to your `config/initializers/omniauth.rb`:
+
     use OmniAuth::Builder do
       provider :vimeo, ENV['VIMEO_KEY'], ENV['VIMEO_SECRET']
     end
+
+You need to replace the VIMEO_KEY and VIMEO_SECRET with your own credentials, you can get them at the Vimeo's developer page as mention above.
 
 ## Supported Rubies
 
