@@ -25,7 +25,13 @@ Or install it yourself as:
 If omniauth-vimeo is ready to go, you need to add the following lines to your `config/initializers/omniauth.rb`:
 
     use OmniAuth::Builder do
-      provider :vimeo, ENV['VIMEO_KEY'], ENV['VIMEO_SECRET']
+        provider :vimeo, ENV['VIMEO_KEY'], ENV['VIMEO_SECRET']
+    end
+
+If you need write permission use the following lines:
+
+    use OmniAuth::Builder do
+        provider :vimeo, ENV['VIMEO_KEY'], ENV['VIMEO_SECRET'], authorize_params: {permission: "write"}
     end
 
 You need to replace the VIMEO_KEY and VIMEO_SECRET with your own credentials, you can get them at the Vimeo's developer page as mention above.
