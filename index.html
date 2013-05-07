@@ -35,14 +35,26 @@ use it, you'll need to sign up for an OAuth Application ID and Secret
 on the <a href="https://developer.vimeo.com/apps">Vimeo Applications Page</a>.
 You can read more about Vimdeo's oauth over at their <a href="https://developer.vimeo.com/apis/advanced#oauth">developer page</a></p>
 
-<h2>Basic Usage</h2>
+<h2>Installation</h2>
 
-<p>add the following line to your Gemfile.</p>
+<p>Add this line to your application's Gemfile:</p>
 
 <pre><code>gem 'omniauth-vimeo'
 </code></pre>
 
-<p>If you finished running bundler and omniauth-vimeo is ready to go, you need to add the following lines to your <code>config/initializers/omniauth.rb</code>:</p>
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install omniauth-vimeo
+</code></pre>
+
+<h2>Usage</h2>
+
+<p>If omniauth-vimeo is ready to go, you need to add the following lines to your <code>config/initializers/omniauth.rb</code>:</p>
 
 <pre><code>use OmniAuth::Builder do
   provider :vimeo, ENV['VIMEO_KEY'], ENV['VIMEO_SECRET']
@@ -50,6 +62,11 @@ end
 </code></pre>
 
 <p>You need to replace the VIMEO_KEY and VIMEO_SECRET with your own credentials, you can get them at the Vimeo's developer page as mention above.</p>
+
+<p>Open the following URL and connect your Vimeo account with your application:</p>
+
+<pre><code>/auth/vimeo
+</code></pre>
 
 <h2>Supported Rubies</h2>
 
