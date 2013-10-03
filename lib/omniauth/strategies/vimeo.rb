@@ -46,7 +46,7 @@ module OmniAuth
       end
 
       def request_phase
-        options[:authorize_params] = {:perms => options[:scope]} if options[:scope]
+        options[:authorize_params] = {:permission => options[:scope]} if options[:scope]
         super
       end
     end
