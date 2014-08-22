@@ -17,10 +17,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_runtime_dependency 'multi_json', '~> 1.3'
-  gem.add_runtime_dependency 'omniauth-oauth', '~> 1.0'
-  gem.add_development_dependency "rspec", "~> 2.9"
-  gem.add_development_dependency 'rake', '~> 0.9'
+  gem.add_dependency 'multi_json', '~> 1.10'
+  gem.add_dependency 'omniauth-oauth', '~> 1.0'
+
+  gem.add_development_dependency "rspec", "~> 3.0"
+  gem.add_development_dependency 'rake'
 
   gem.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if gem.respond_to? :required_rubygems_version=
 end
