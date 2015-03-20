@@ -40,6 +40,65 @@ Open the following URL and connect your Vimeo account with your application:
 
     /auth/vimeo
 
+## Sample Auth Hash
+	{
+      "provider"=>"vimeo",
+      "uid"=>5387263,
+      "info"=>{
+        "id"=>5387263,
+        "nickname"=>"beanieboi",
+        "name"=>"beanie",
+        "bio"=>nil,
+        "account"=>"basic",
+        "location"=>nil,
+        "pictures"=>[
+          {
+            "type"=>"portrait",
+            "width"=>30,
+            "height"=>30,
+            "link"=>"https://i.vimeocdn.com/portrait/2249717_30x30.jpg"
+          },
+       	  {
+       	    "type"=>"portrait",
+       	    "width"=>75,
+       	    "height"=>75,
+       	    "link"=>"https://i.vimeocdn.com/portrait/2249717_75x75.jpg"
+       	  },
+          {
+            "type"=>"portrait",
+            "width"=>100,
+            "height"=>100,
+            "link"=>"https://i.vimeocdn.com/portrait/2249717_100x100.jpg"
+          },
+          {
+            "type"=>"portrait",
+            "width"=>300,
+            "height"=>300,
+            "link"=>"https://i.vimeocdn.com/portrait/2249717_300x300.jpg"
+          }
+        ],
+        "websites"=>[],
+        "content_filter"=>[
+          "language",
+          "drugs",
+          "violence",
+          "nudity",
+          "safe",
+          "unrated"
+        ],
+        "created_time"=>"2010-12-03T17:57:33+00:00",
+        "link"=>"https://vimeo.com/beanieboi",
+        "uri"=>"/users/5387263"
+      },
+      "credentials"=>{
+        "token"=>"token",
+        "expires"=>false
+      },
+      "extra"=>{
+        "scope"=>"public private"
+      }
+    }
+
 ## Supported Rubies
 
 OmniAuth Vimeo is tested under 2.0 and above
