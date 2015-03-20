@@ -15,14 +15,23 @@ module OmniAuth
 
       info do
         {
-          'id' => access_token.params['user']['uri'].split('/').last.to_i,
-          'nickname' => access_token.params['user']['link'].split('/').last,
-          'name' => access_token.params['user']['name'],
-          'account' => access_token.params['user']['account'],
-          'location' => access_token.params['user']['location'],
-          'image' => access_token.params['user']['pictures'].last['link'],
-          'vimeo_url' => access_token.params['user']['link']
+          'id' => user_info['uri'].split('/').last.to_i,
+          'nickname' => user_info['link'].split('/').last,
+          'name' => user_info['name'],
+          'bio' => user_info['bio'],
+          'account' => user_info['account'],
+          'location' => user_info['location'],
+          'pictures' => user_info['pictures'],
+          'websites' => user_info['websites'],
+          'content_filter' => user_info['content_filter'],
+          'created_time' => user_info['created_time'],
+          'link' => user_info['link'],
+          'uri' => user_info['uri'],
         }
+      end
+
+      def user_info
+        access_token.params['user']
       end
 
       credentials do
