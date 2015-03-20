@@ -3,7 +3,7 @@
 This is an OmniAuth strategy for authenticating to Vimeo. To
 use it, you'll need to sign up for an OAuth Application ID and Secret
 on the [Vimeo Applications Page](https://developer.vimeo.com/apps).
-You can read more about Vimdeo's oauth over at their [developer page](https://developer.vimeo.com/apis/advanced#oauth)
+You can read more about Vimdeo's OAuth over at their [developer page](https://developer.vimeo.com/api/authentication)
 
 
 ## Installation
