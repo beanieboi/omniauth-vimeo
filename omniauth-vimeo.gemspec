@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
 require "omniauth-vimeo/version"
 
@@ -17,9 +16,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
+  gem.required_ruby_version = '~> 2.0'
+
   gem.add_dependency 'omniauth-oauth2'
 
-  gem.add_development_dependency "rspec", "~> 3"
+  gem.add_development_dependency "rspec", "> 3"
   gem.add_development_dependency 'rake'
 
   gem.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if gem.respond_to? :required_rubygems_version=
