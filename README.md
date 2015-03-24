@@ -5,6 +5,11 @@ use it, you'll need to sign up for an OAuth Application ID and Secret
 on the [Vimeo Applications Page](https://developer.vimeo.com/apps).
 You can read more about Vimdeo's OAuth over at their [developer page](https://developer.vimeo.com/api/authentication)
 
+## Contributing
+
+see [CONTRIBUTING.md][contributing]
+
+[contributing]: https://github.com/beanieboi/omniauth-vimeo/blob/master/CONTRIBUTING.md
 
 ## Installation
 
@@ -104,14 +109,6 @@ Open the following URL and connect your Vimeo account with your application:
 OmniAuth Vimeo is tested under 2.0 and above
 
 [![Build Status](https://secure.travis-ci.org/beanieboi/omniauth-vimeo.png?branch=master)](http://travis-ci.org/beanieboi/omniauth-vimeo)
-
-## Note on Patches/Pull Requests
-
-- Fork the project.
-- Make your feature addition or bug fix.
-- Add tests for it. This is important so I don’t break it in a future version unintentionally.
-- Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-- Send me a pull request. Bonus points for topic branches.
 
 ## License
 
