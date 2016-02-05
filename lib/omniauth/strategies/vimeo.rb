@@ -30,6 +30,10 @@ module OmniAuth
         }
       end
 
+      def callback_url
+        full_host + script_name + callback_path
+      end
+
       def user_info
         access_token.params['user']
       end
