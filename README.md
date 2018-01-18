@@ -106,7 +106,7 @@ Open the following URL and connect your Vimeo account with your application:
 
 ## Supported Rubies
 
-OmniAuth Vimeo is tested under 2.0 and above
+OmniAuth Vimeo is tested under 2.3, 2.4, 2.5, JRuby (head) and Rubinius and ruby-head.
 
 [![Build Status](https://secure.travis-ci.org/beanieboi/omniauth-vimeo.png?branch=master)](http://travis-ci.org/beanieboi/omniauth-vimeo)
 
