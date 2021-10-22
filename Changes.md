@@ -1,3 +1,8 @@
+2.0.2 / 2021-10-22
+==================
+- support for Ruby 3
+- move from TravisCI to GitHub Actions
+
 2.0.0 / 2012-06-23
 ==================
 - implemented new OAuth2 API
