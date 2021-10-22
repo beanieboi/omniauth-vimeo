@@ -3,8 +3,8 @@ language: ruby
 script: rspec spec
 
 rvm:
-  - 2.3.6
-  - 2.4.3
-  - 2.5.0
+  - 2.6.8
+  - 2.7.4
+  - 3.0.2
   - ruby-head
   - jruby-head
