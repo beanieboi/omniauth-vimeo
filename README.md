@@ -36,7 +36,7 @@ If omniauth-vimeo is ready to go, you need to add the following lines to your `c
 If you need write permission use the following lines:
 
     use OmniAuth::Builder do
-        provider :vimeo, ENV['VIMEO_KEY'], ENV['VIMEO_SECRET'], authorize_params: {permission: "write"}
+        provider :vimeo, ENV['VIMEO_KEY'], ENV['VIMEO_SECRET'], scope: "write"
     end
 
 You need to replace the VIMEO_KEY and VIMEO_SECRET with your own credentials, you can get them at the Vimeo's developer page as mention above.
